@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestServiceActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/requestJobToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Post a Job"
+        app:titleTextColor="@color/yellow" />
+
+    <EditText
+        android:id="@+id/editTextTextProvider"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/form"
+        android:paddingStart="15dp"
+        android:textColor="#646464"
+        android:inputType="none"
+        android:hint="provider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/requestJobToolbar"
+        tools:ignore="RtlSymmetry"/>
+    <EditText
+        android:id="@+id/editTextServices"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/form"
+        android:paddingStart="15dp"
+        android:textColor="#646464"
+        android:inputType="none"
+        android:hint="Select a service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextProvider"
+        tools:ignore="RtlSymmetry"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteDate"
+        android:layout_width="180dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:background="@drawable/form"
+        android:layout_marginTop="13dp"
+        android:autofillHints="__/__/____"
+        android:ems="10"
+        android:hint="@string/date"
+        android:inputType="none"
+        android:paddingStart="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextServices"
+        app:layout_constraintEnd_toStartOf="@id/editTextTextBudget"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/editTextTextBudget"
+        android:layout_width="110dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/form"
+        android:layout_marginTop="13dp"
+        android:autofillHints="Time"
+        android:ems="10"
+        android:hint="R 800"
+        android:inputType="time"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/autoCompleteDate"
+        app:layout_constraintTop_toBottomOf="@+id/editTextServices"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/address_tv"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Address"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextBudget" />
+
+    <EditText
+        android:id="@+id/editTextTextStreet"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:background="@drawable/form"
+        android:layout_marginTop="5dp"
+        android:autofillHints="street address"
+        android:ems="10"
+        android:hint="Street Address"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_tv"
+        tools:ignore="RtlSymmetry" />
+
+
+    <EditText
+        android:id="@+id/editTextTextCity"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="13dp"
+        android:autofillHints="City"
+        android:background="@drawable/form"
+        android:ems="10"
+        android:hint="City"
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextStreet"
+        tools:ignore="RtlSymmetry" />
+
+
+    <Spinner
+        android:id="@+id/spinnerProvince"
+        android:layout_width="190dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="12dp"
+        android:autofillHints="Province"
+        android:background="@drawable/form"
+        android:hint="Province"
+        android:inputType="textAutoComplete"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toStartOf="@id/editTextZip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextCity"
+        tools:ignore="RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/editTextZip"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+        android:autofillHints="Location"
+        android:background="@drawable/form"
+        android:hint="Postal"
+        android:inputType="textPostalAddress"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerProvince"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextCity"
+        tools:ignore="MissingConstraints,RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:layout_marginTop="13dp"
+        android:paddingHorizontal="10dp"
+        android:background="@drawable/form"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="text|textMultiLine"
+        android:paddingStart="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextZip"
+        tools:ignore="RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btnRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/maroon"
+        android:text="Request"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescription"
+        tools:ignore="HardcodedText" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

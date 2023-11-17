@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "635011856740",
+    "firebase_url": "https://tradesmanhub-ab3ba-default-rtdb.firebaseio.com",
+    "project_id": "tradesmanhub-ab3ba",
+    "storage_bucket": "tradesmanhub-ab3ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635011856740:android:e073bb30e969fb0b7ae271",
+        "android_client_info": {
+          "package_name": "com.example.tradesmanhub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZKSw_hc1SgzsQE7WxoucEpAEBJ8t8qVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

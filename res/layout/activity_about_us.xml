@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".AboutUsActivity">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="163dp"
+        android:text="@string/about_us"
+        android:textColor="@color/maroon"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="322dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="114dp"
+        android:text="@string/tradesmanhub_is_a_new_web_application_that_aims_to_connect_qualified_service_providers_with_customers_in_need_of_their_skills_such_as_cleaning_plumbing_landscaping_etc"
+        android:textAlignment="center"
+        android:textColor="#333333"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:ignore="TextSizeCheck" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="410dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:contentDescription="@string/todo3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_01"
+        tools:ignore="ImageContrastCheck" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNav"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="#f2f2f2"
+        android:scrollIndicators="left"
+        app:itemIconTint="#333333"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_menu"
+        tools:ignore="VisualLintBottomNav" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

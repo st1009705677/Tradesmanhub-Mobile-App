@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name=".TradesmanHub"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/icon_01"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tradesmanhub"
+        tools:targetApi="31">
+        <activity
+            android:name=".RequestServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SendQuoteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RequestsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NavMenu"
+            android:exported="false" />
+        <activity
+            android:name=".serviceproviders.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AboutUsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".serviceproviders.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostJobActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BookActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

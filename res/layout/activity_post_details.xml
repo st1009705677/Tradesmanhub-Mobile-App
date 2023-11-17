@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/jobDetailsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Job Details"
+        app:titleTextColor="@color/yellow" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/jobDetailsToolbar"
+            android:layout_alignParentBottom="true">
+            <ImageView
+                android:id="@+id/details_display_picture"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/ic_placeholder_profile"
+                android:layout_centerHorizontal="true"/>
+            <TextView
+                android:id="@+id/details_client"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Ikageng Tladi"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/details_display_picture"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/details_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textSize="18sp"
+                android:layout_below="@id/details_client"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:id="@+id/details_contact_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/details_address"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone">
+                <ImageButton
+                    android:id="@+id/details_call"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_call"
+                    android:visibility="gone"/>
+                <ImageButton
+                    android:id="@+id/details_email"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_email"
+                    android:layout_below="@id/details_address"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/label_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Description"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/details_contact_layout"
+                android:layout_centerHorizontal="true" />
+            <TextView
+                android:id="@+id/details_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Description comes here"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/label_description"
+                android:layout_centerHorizontal="true" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/details_description"
+                android:layout_above="@+id/details_quote_btn">
+                <com.google.android.material.divider.MaterialDivider
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:dividerColor="@color/black"
+                    android:layout_marginVertical="1dp"
+                    app:dividerThickness="1dp"
+                    android:layout_alignParentTop="true"/>
+                <TextView
+                    android:id="@+id/label_quotes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quotes"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"
+                    android:layout_below="@id/divider"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No quotes sent"
+                    android:layout_below="@id/label_quotes"
+                    android:layout_centerHorizontal="true" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/details_quote_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/details_quote_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/maroon"
+                android:layout_margin="20dp"
+                android:text="Send Quote"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:cornerRadius="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+</RelativeLayout>

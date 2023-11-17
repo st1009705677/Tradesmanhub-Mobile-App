@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/app_name_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginVertical="10dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_name_home">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginEnd="20sp"
+                android:layout_marginBottom="20sp">
+                <!-- welcome home message -->
+                <TextView
+                    android:id="@+id/tv_welcome_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="80dp"
+                    android:text="@string/hello"
+                    android:textColor="@color/black"
+                    android:textSize="34sp" />
+
+                <TextView
+                    android:id="@+id/uname_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_welcome_home"
+                    android:layout_centerInParent="true"
+                    android:layout_marginVertical="10dp"
+                    android:text="Ikageng Tladi"
+                    android:textSize="24sp" />
+                <!-- Quick links title -->
+                <TextView
+                    android:id="@+id/tv_quick_links"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/uname_home"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/quick_links"
+                    android:textSize="18sp" />
+
+                <!-- Quick link card views -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_clickable_booking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_quick_links"
+                    android:layout_margin="5dp"
+                    android:outlineAmbientShadowColor="@color/black"
+                    app:cardCornerRadius="20dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <RelativeLayout
+                        android:id="@+id/postJob"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:clickable="true">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_reserve" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_book_a_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv_clickable_booking"
+                    android:layout_alignStart="@+id/cv_clickable_booking"
+                    android:text="Post Job"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_clickable_listings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_quick_links"
+                android:layout_alignBaseline="@+id/cv_clickable_booking"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_toRightOf="@+id/cv_clickable_booking"
+                android:outlineAmbientShadowColor="@color/black"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/jobListings"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_listings" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tv_listings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cv_clickable_listings"
+                    android:layout_alignStart="@+id/cv_clickable_listings"
+                    android:text="Job listings"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>
